@@ -25,4 +25,13 @@ class BearTest < MiniTest::Test
     assert_equal(1, @bear.stomach_count)
   end
 
+  def test_is_starving
+    assert_equal(true, @bear.stomach_is_empty)
+  end
+
+  def test_hunt_for_fish
+    result = @bear.bear_gets_fed
+    assert_equal(1, result)
+  end
+
 end
